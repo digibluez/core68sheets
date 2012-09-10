@@ -14,10 +14,15 @@
 	
 	</hgroup>	
 
-			<?php if ( is_home() ) { ?>
+			<?php if ( is_home() || is_archive() ) { ?>
 			<?php the_excerpt(); ?>
 			
-			<?php } else { ?>
-			<?php the_content(); } ?>
+			<?php } elseif (is_single() ) { ?>
+			<?php the_content();  ?>
 
+			<?php if ( comments_open() || '0' != get_comments_number() ) ?>
+			
+			<?php comments_template( '/templates/comments.php', true );  ?>	
+			
+			<?php } ?>
 </article>
