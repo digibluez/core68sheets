@@ -1,0 +1,3 @@
+section article {border:1px solid #ccc;padding:10px;clear:both;}
+section article>hgroup{padding-bottom:15px;}
+section article>hgroup h1,h2{display:inline;float:left;padding-right:10px;}

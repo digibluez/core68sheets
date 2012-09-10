@@ -11,10 +11,13 @@
 		<h2><?php the_permalink() ?></h2>
 		<h2><?php edit_post_link('Edit'); ?></h2>
 		<h3><?php comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?></h3>
+	
+	</hgroup>	
 
-	</hgroup>
-
-
-
+			<?php if ( is_home() ) { ?>
+			<?php the_excerpt(); ?>
+			
+			<?php } else { ?>
+			<?php the_content(); } ?>
 
 </article>
