@@ -43,6 +43,15 @@
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'core68sheets' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+<?php 		
+		comment_form(array(
+		'label_submit' => _('Submit'),
+		'title_reply'=>'',
+		'comment_notes_before' =>'<p class="must-log-in">' .  sprintf( __( 'Please <a href="%s">log in</a> to post a comment.' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
+        'comment_notes_after' => '',
+        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+        'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
+    ));
+?>
 
 </div>

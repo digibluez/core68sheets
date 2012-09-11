@@ -1,15 +1,7 @@
-<?php require_once locate_template('/templates/comment-list.php');  ?>
-<?php 
+<?php
+	require_once locate_template('/templates/comment-list.php');
+	require_once locate_template('/inc/filters.php');
+	require_once locate_template('/inc/features.php');	
 
-function core68sheets_excerpt_more($more) {
-       global $post;
-	return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
-}
-add_filter('excerpt_more', 'core68sheets_excerpt_more');
-
-add_filter( "get_comment_author_link", "wpse_63316_modifiy_comment_author_anchor" );
-function wpse_63316_modifiy_comment_author_anchor( $author_link ){
-    return str_replace( "<a", "<a target='_blank'", $author_link );
-}
-
-?>
+		
+ ?>

@@ -30,7 +30,9 @@ INSPIRATION!! NOTES!!! RESPONSE!! COMMENT!!! FOLLOW!!
 <?php get_footer(); ?>
 <?php get_sidebar(); ?>
 <?php get_template_part(); ?>
-<?php comments_template(); ?>
+
+<?php if ( comments_open() || '0' != get_comments_number() ) ?>
+<?php comments_template( '/templates/comments.php', true );  ?>	
 
 function core68sheets_excerpt_more($more) {
        global $post;
