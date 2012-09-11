@@ -1,8 +1,8 @@
-<article id="post-<?php the_ID(); ?>">
+<article id="post-<?php the_ID();?>">
 		
 	<hgroup>
 
-		<h1><?php the_title(); ?></h1>
+		<h1><?php the_title();?></h1>
 		<h2><?php the_ID(); ?></h2>
 		<h2><?php the_time('F jS, Y') ?></h2>
 		<h2><?php the_author() ?></h2>

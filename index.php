@@ -7,6 +7,8 @@
 	<?php get_template_part('templates/post', get_post_format()); ?>
 
 	<?php endwhile; ?> 
+
+	<?php core68sheets_content_nav( 'nav-below' ); ?>
 	
 	<?php else: ?>
 
