@@ -1,21 +1,21 @@
 <?php get_template_part('templates/head'); ?>
 
-  <section>
+<section>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<?php get_template_part('templates/post', get_post_format()); ?>
+<?php get_template_part('templates/post', get_post_format()); ?>
 
-	<?php endwhile; ?> 
+<?php endwhile; ?> 
 
-	<?php core68sheets_content_nav( 'nav-below' ); ?>
+<?php core68sheets_content_nav( 'nav-below' ); ?>
 	
-	<?php else: ?>
+<?php else: ?>
 
-	<?php _e('Sorry, no posts matched your criteria.'); ?>
+<?php _e('Sorry, no posts matched your criteria.'); ?>
 
 <?php endif; ?>
 
-  </section>
+</section>
 
 <?php get_template_part('templates/footer'); ?>
