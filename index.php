@@ -1,6 +1,6 @@
 <?php get_template_part('templates/head'); ?>
 
-<section>
+  <section>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -16,6 +16,6 @@
 
 <?php endif; ?>
 
-</section>
+  </section>
 
 <?php get_template_part('templates/footer'); ?>
