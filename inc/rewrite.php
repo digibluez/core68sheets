@@ -1,7 +1,14 @@
 <?php
+//
+//Rewrite functions only working,when custom rules are added in .htaccess
+//
+//RewriteRule ^css/(.*) /base-v2/68files/themes/core68sheets/css/$1 [L]
+//RewriteRule ^js/(.*) /base-v2/68files/themes/core68sheets/js/$1 [L]
+//RewriteRule ^img/(.*) /base-v2/68files/themes/core68sheets/img/$1 [L]
+//
 function change_css_js_url($content) {
     $current_path = '/68files/themes/core68sheets/';
-    $new_path = '/'; // No need to add /css or /js here since you're mapping the subdirectories 1-to-1
+    $new_path = '/';
     $content = str_replace($current_path, $new_path, $content);
     return $content;
 }
