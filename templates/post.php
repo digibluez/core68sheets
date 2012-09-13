@@ -9,9 +9,9 @@
 <h2><?php the_tags('Tags: ', ', ', '<br />'); ?></h2>
 <h2><?php the_permalink() ?></h2>
 <h2><?php edit_post_link('Edit'); ?></h2>
-<h3><?php comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?></h3>
+<h2><?php comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?></h2>
 </hgroup>
- 
+<section>
 <?php if ( is_home() || is_archive() ) { ?>
     
 <?php the_excerpt(); ?>
@@ -25,4 +25,5 @@
 <?php comments_template( '/templates/comments.php', true );  ?>	
     
 <?php } ?>
+</section>
 </article>
