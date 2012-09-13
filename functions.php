@@ -14,7 +14,7 @@ function core68sheets_setup() {
 	require_once locate_template('/inc/filters.php');
 	require_once locate_template('/inc/features.php');
 	require_once locate_template('/inc/rewrite.php');
-	add_theme_support( 'automatic-feed-links' );
+        add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	remove_action( 'wp_head', 'wlwmanifest_link' );  
 	remove_action('wp_head', 'rsd_link');
@@ -36,14 +36,18 @@ add_action( 'after_setup_theme', 'core68sheets_setup' );
 //Push script files to browser, added to footer only
 //
 function core68sheets_scripts() {
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply');
-	}
-
-	
+if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+wp_enqueue_script( 'comment-reply');
+}
 }
 add_action( 'wp_enqueue_scripts', 'core68sheets_scripts' );
+// Saved for future
+//function my_scripts() {
+//    wp_register_script( 'xxx', '/js/xxx.js');
+//    wp_enqueue_script( 'xxx' );
+//}    
+//add_action('wp_enqueue_scripts', 'my_scripts');
+
 //
 //Removes recent comments widget and inline style from html
 //
