@@ -21,10 +21,11 @@
 <header>
 <hgroup>
 <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-<h2><?php bloginfo('description'); ?></h2>
+<h1>[<?php bloginfo('description'); ?>]</h1>
 </hgroup>
-<nav id="site-navigation" role="navigation">
+</header>
+
+<nav>
 <?php wp_nav_menu( array('container' => false,  'theme_location' => 'primary', 'menu_class' => 'nav-menu' ,'items_wrap'   => '%3$s') ); ?>
 </nav>
-</header>
     
