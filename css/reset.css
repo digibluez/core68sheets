@@ -18,7 +18,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 article, aside, figure, footer, header, hgroup, nav, section {display: block;}
 body {line-height: 1;font: 13px Helmet, Freesans, sans-serif;background: #fff;}
-ol, ul {list-style: none;}
+ol, ul,li {list-style: none;}
 p {margin-bottom: 1.5em;padding-left:25px;padding-right:25px;}
 blockquote, q {quotes: none;}
 blockquote:before, blockquote:after,
@@ -37,12 +37,13 @@ input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
 select, input, textarea {font: 99% sans-serif;}
 a:hover, a:active {outline:0;}
 a:focus {outline: thin dotted;}
+a:link,a:visited{text-decoration:none;}
 small {font-size: 85%;}
 strong, th {font-weight: bold;}
 td, td img {vertical-align: top;} 
 pre, code, kbd, samp {font-family: monospace, sans-serif;}
 label, input[type=button], input[type=submit], button {cursor: pointer;}
 button, input, select, textarea {margin: 0;}
-ul ul, ol ol, ul ol, ol ul {margin-bottom: 0;margin-left: 1.5em;}
+ul ul, ol ol, ul ol, ol ul {margin-bottom: 0;margin-left: 1.5em;list-style: none;}
 button,input,select,textarea {font-size: 100%;margin: 0;vertical-align: baseline; *vertical-align: middle; }
 textarea {overflow: auto;padding-left: 3px;vertical-align: top;}
