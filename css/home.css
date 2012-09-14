@@ -6,22 +6,23 @@ h1{
     text-shadow: 1px 0px 1px rgba(51,51,51,0.3);
 }
 h1,h2,article>section{text-shadow: 1px 0px 1px rgba(51,51,51,0.3);font-weight:normal;}
-.wf-active h1 {font-family: "Merienda One", serif;}
-.wf-active article>section {padding-top:10px;line-height:1.2em;clear:both;font-family: 'Ubuntu', serif;font-size:180%;word-spacing: 1px;}
-.wf-active article h2{font-family:'Ubuntu',serif;}
+h1 {font-family: "Merienda One", serif;}
+article>section {padding-top:10px;line-height:1.2em;clear:both;font-family: 'Ubuntu', serif;font-size:180%;word-spacing: 1px;}
+article h2{font-family:'Ubuntu',serif;}
 section article {border:1px solid #ccc;padding:10px;clear:both;}
 section article>hgroup{padding-bottom:15px;}
 section article>hgroup h1,h2{display:inline;float:left;padding-right:10px;}
-header{background-color:#BD6902;border-bottom: double 3px #0170BA;}
+header{background-color:#B17E30;border-bottom: solid 1px #29A9DF;}
 header h1{display:block;clear:both;color:#F6F2E2}
 header hgroup{padding:10px;}
+body nav {border-bottom: solid 1px #fff;}
+section>nav{border-top: solid 1px #fff;border-bottom:0;height:20px;clear:both;}
 nav{background:#384B6A;padding:5px;}
 footer{padding:10px;background:#222222;color:#CFCFCF;text-align:center;border-top:1px solid #29A9DF;}
 section>nav>li:first-child{float:left;}
 section>nav>li:last-child{float:right;}
-section>nav{height:20px;clear:both;}
-section{background:#E5E5E5;}
-#LINKS,header>hgroup a:link,a:visited{font-family:'Voces',serif;color:#FFF0C5;}
+section{background:#F0F0F0;}
+#LINKS,header>hgroup a:link,a:visited{letter-spacing: -3px;font-size:44px;font-family:Georgia, serif;color:#11305E;font-style: italic;font-weight: lighter;line-height: 1.2em;}
 article>hgroup a:link{color:#0170BA;}
 article>hgroup a:hover{text-decoration:underline;}
 article>hgroup a:visited{color:#0170BA;}
