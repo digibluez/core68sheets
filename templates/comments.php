@@ -9,16 +9,6 @@ printf( _n( '%2$s comment;', '%1$s comments', get_comments_number(), 'core68shee
 number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 ?>
 
-
-<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :  ?>
-<nav role="navigation" id="comment-nav-above">
-<h1><?php _e( 'Comment navigation', 'core68sheets' ); ?></h1>
-<h1><?php previous_comments_link( __( '&larr; Older Comments', 'core68sheets' ) ); ?></h1>
-<h1><?php next_comments_link( __( 'Newer Comments &rarr;', 'core68sheets' ) ); ?></h1>
-</nav>
-<?php endif; ?>
-
-
 <?php wp_list_comments( array( 'callback' => 'core68sheets_comment' ) ); ?>
 
 
