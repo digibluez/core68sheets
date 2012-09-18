@@ -5,10 +5,17 @@
 //
 function core68sheets_excerpt_more($more) {
        global $post;
-	return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
+	return null;
+// Remove comment to ouput link, and remove it from loop
+//  '<a href="'. get_permalink($post->ID) . '">[...]</a>'
 }
-
+//Only restricts for content(); if no excerpt is specified,
+//dose not strip excerpt itself.
 add_filter('excerpt_more', 'core68sheets_excerpt_more');
+function core68sheets_excerpt_length($length) {
+	return 50;
+}
+add_filter('excerpt_length', 'core68sheets_excerpt_length');
 //
 //Adds target blank to author links in comments,rel=nofollow added by default.
 //
@@ -68,5 +75,15 @@ function cssattr_filter($var) {
 	
 	return $newArr;
 }
+//
+//Post Featured Image, Always links to post permalink
+//
+add_filter( 'post_thumbnail_html', 'core68sheets_post_image_html', 10, 3 );
 
+function core68sheets_post_image_html( $html, $post_id, $post_image_id ) {
+
+  $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+  return $html;
+
+}
 ?>
